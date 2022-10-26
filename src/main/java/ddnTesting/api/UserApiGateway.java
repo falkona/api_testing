@@ -1,5 +1,5 @@
 package ddnTesting.api;
-
+;
 import ddnTesting.models.ApiResponse;
 import ddnTesting.models.User;
 import lombok.SneakyThrows;
@@ -24,6 +24,11 @@ public class UserApiGateway {
     @SneakyThrows
     public Response<ApiResponse> createUser(User userData) {
         return service.createUser(userData).execute();
+    }
+
+    @SneakyThrows
+    public Response<User> getUserByName(String userName) {
+        return service.getUserByName(userName).execute();
     }
 
 }
